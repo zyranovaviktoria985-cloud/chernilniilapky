@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чернильные Лапки — Рейтинг</title>
+    <link rel="stylesheet" href="./css/ratingRomans.css">
+<body>
+
+    <!-- Header -->
+    <header>
+        <a href="./main.html" class="logo">
+            <img src="./art/Логотип.png" alt="Лого" />
+            Чернильные Лапки
+        </a>
+        <nav>
+            <a href="./news.html">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/></svg>
+                Новости
+            </a>
+            <a href="./contests.html">
+                <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
+                Конкурс
+            </a>
+            <a href="./ratingRomans.html" class="active">
+                <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                Рейтинг
+            </a>
+        </nav>
+        <a href="./input.html" class="btn-login">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            Войти
+        </a>
+    </header>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+        <a href="./ratingRomans.html"><button class="category-tab" >Романы</button></a>
+        <a href="./ratingDetectives.html"><button class="category-tab active">Детективы</button></a>
+        <a href="./ratingAdventures.html"><button class="category-tab">Приключения</button></a>
+        <a href="./ratingHorror.html"><button class="category-tab">Хоррор и мистика</button></a>
+        <a href="./ratingFantasy.html"><button class="category-tab">Фэнтези и фантастика</button></a>
+    </div>
+
+    <!-- Ranking Section -->
+    <main class="ranking-section">
+        <!-- 1st Place -->
+        <div class="ranking-card rank-1">
+            <img src="./art/1761314661.png" alt="Аватар" class="avatar" />
+            <div class="rank-info">
+                <span class="rank-number">1 Место</span>
+                <span class="rank-nickname">Никнейм</span>
+            </div>
+            <div class="book-info">
+                <span class="book-title">Название книги</span>
+                <button class="like-btn">
+                    <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                </button>
+            </div>
+            <button class="btn-read">Читать</button>
+            <svg class="trophy" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffd700"/>
+                        <stop offset="100%" style="stop-color:#daa520"/>
+                    </linearGradient>
+                </defs>
+                <path d="M16 8h32v4H16zM20 12h24v16H20zM18 12H10v8a8 8 0 0 0 8 8M46 12h8v8a8 8 0 0 1-8 8M24 28h16v8H24zM28 36h8v8h-8zM22 44h20v4H22z" fill="url(#goldGrad)" stroke="#b8860b" stroke-width="1.5"/>
+                <circle cx="32" cy="20" r="4" fill="#fff8dc" opacity="0.6"/>
+            </svg>
+        </div>
+
+        <!-- 2nd Place -->
+        <div class="ranking-card rank-2">
+            <img src="./art/1761314591.png" alt="Аватар" class="avatar" />
+            <div class="rank-info">
+                <span class="rank-number">2 Место</span>
+                <span class="rank-nickname">Никнейм</span>
+            </div>
+            <div class="book-info">
+                <span class="book-title">Название книги</span>
+                <button class="like-btn">
+                    <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                </button>
+            </div>
+            <button class="btn-read">Читать</button>
+            <svg class="trophy" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#e8e8e8"/>
+                        <stop offset="100%" style="stop-color:#c0c0c0"/>
+                    </linearGradient>
+                </defs>
+                <path d="M16 8h32v4H16zM20 12h24v16H20zM18 12H10v8a8 8 0 0 0 8 8M46 12h8v8a8 8 0 0 1-8 8M24 28h16v8H24zM28 36h8v8h-8zM22 44h20v4H22z" fill="url(#silverGrad)" stroke="#a0a0a0" stroke-width="1.5"/>
+                <circle cx="32" cy="20" r="4" fill="#ffffff" opacity="0.6"/>
+            </svg>
+        </div>
+
+        <!-- 3rd Place -->
+        <div class="ranking-card rank-3">
+            <img src="./art/1761314591.png" alt="Аватар" class="avatar" />
+            <div class="rank-info">
+                <span class="rank-number">3 Место</span>
+                <span class="rank-nickname">Никнейм</span>
+            </div>
+            <div class="book-info">
+                <span class="book-title">Название книги</span>
+                <button class="like-btn">
+                    <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                </button>
+            </div>
+            <button class="btn-read">Читать</button>
+            <svg class="trophy" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="bronzeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#d4a050"/>
+                        <stop offset="100%" style="stop-color:#b08040"/>
+                    </linearGradient>
+                </defs>
+                <path d="M16 8h32v4H16zM20 12h24v16H20zM18 12H10v8a8 8 0 0 0 8 8M46 12h8v8a8 8 0 0 1-8 8M24 28h16v8H24zM28 36h8v8h-8zM22 44h20v4H22z" fill="url(#bronzeGrad)" stroke="#906030" stroke-width="1.5"/>
+                <circle cx="32" cy="20" r="4" fill="#f5e6d0" opacity="0.6"/>
+            </svg>
+        </div>
+
+        <!-- 4th Place -->
+        <div class="ranking-card rank-4">
+            <img src="./art/1761314661.png" alt="Аватар" class="avatar" />
+            <div class="rank-info">
+                <span class="rank-number">4 Место</span>
+                <span class="rank-nickname">Никнейм</span>
+            </div>
+            <div class="book-info">
+                <span class="book-title">Название книги</span>
+                <button class="like-btn">
+                    <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                </button>
+            </div>
+            <button class="btn-read">Читать</button>
+        </div>
+
+        <!-- 5th Place -->
+        <div class="ranking-card rank-5">
+            <img src="./art/1761314661.png" alt="Аватар" class="avatar" />
+            <div class="rank-info">
+                <span class="rank-number">5 Место</span>
+                <span class="rank-nickname">Никнейм</span>
+            </div>
+            <div class="book-info">
+                <span class="book-title">Название книги</span>
+                <button class="like-btn">
+                    <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                </button>
+            </div>
+            <button class="btn-read">Читать</button>
+        </div>
+
+        <!-- 6th Place -->
+        <div class="ranking-card rank-6">
+            <img src="./art/1761314994.png" alt="Аватар" class="avatar" />
+            <div class="rank-info">
+                <span class="rank-number">6 Место</span>
+                <span class="rank-nickname">Никнейм</span>
+            </div>
+            <div class="book-info">
+                <span class="book-title">Название книги</span>
+                <button class="like-btn">
+                    <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                </button>
+            </div>
+            <button class="btn-read">Читать</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./art/Логотип.png" alt="Лого" />
+                Чернильные Лапки
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Профиль</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Конкурс</a></li>
+                    <li><a href="#">Рейтинг</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Моя полка</a></li>
+                    <li><a href="#">Работы</a></li>
+                    <li><a href="#">Черновики</a></li>
+                    <li><a href="#">Посты</a></li>
+                    <li><a href="#">Кликер</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Обратная связь</a></li>
+                    <li><a href="#">Группы</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <p>Поддержка команды</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Telegram">
+                        <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" title="VK">
+                        <svg viewBox="0 0 24 24"><path d="M12.785 16.241s.288-.032.436-.194c.136-.148.132-.427.132-.427s-.02-1.304.587-1.496c.598-.189 1.367 1.259 2.182 1.814.616.42 1.084.327 1.084.327l2.175-.03s1.138-.07.598-.964c-.044-.073-.314-.661-1.618-1.869-1.366-1.265-1.183-1.06.462-3.246.999-1.33 1.398-2.142 1.273-2.489-.12-.332-.856-.244-.856-.244l-2.454.015s-.182-.025-.317.056c-.131.079-.216.263-.216.263s-.387 1.028-.903 1.902c-1.088 1.845-1.524 1.944-1.702 1.83-.414-.265-.31-1.066-.31-1.638 0-1.79.271-2.534-.528-2.726-.265-.064-.462-.106-1.145-.113-.876-.009-1.617.003-2.036.209-.28.137-.496.441-.365.459.162.022.53.099.726.365.253.344.244 1.115.244 1.115s.145 2.098-.34 2.358c-.332.18-.788-.187-1.767-1.867-.502-.863-.882-1.814-.882-1.814s-.073-.18-.204-.276c-.159-.117-.38-.154-.38-.154l-2.334.015s-.35.01-.479.162c-.114.135-.009.414-.009.414s1.836 4.295 3.916 6.462c1.905 1.985 4.073 1.854 4.073 1.854h.981z"/></svg>
+                    </a>
+                    <a href="#" class="social-icon" title="Patreon">
+                        <svg viewBox="0 0 24 24"><path d="M14.82 2.41c3.96 0 7.18 3.24 7.18 7.21 0 3.96-3.22 7.18-7.18 7.18-3.97 0-7.21-3.22-7.21-7.18 0-3.97 3.24-7.21 7.21-7.21M2 21.6h3.5V2.41H2V21.6z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

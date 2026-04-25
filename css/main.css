@@ -1,0 +1,602 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            background-color: #e8d8cc;
+            color: #3e2c1c;
+        }
+
+        /* Header */
+        header {
+            background-color: #9e8b78;
+            padding: 0.8rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #c4b09a;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #f0e6d8;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: #d4c5b0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #f0e6d8;
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #c4a66a;
+        }
+
+        nav a svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .btn-login {
+            background-color: #7a6650;
+            color: #f0e6d8;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #6b5740;
+        }
+
+        .btn-login svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* Book Carousel */
+        .carousel-section {
+            background-color: #9e8b78;
+            padding: 1.5rem 2rem 2.5rem;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .carousel-viewport {
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            gap: 1.5rem;
+        }
+
+        .book-card {
+            background-color: #d9d3c9;
+            border-radius: 4px;
+            padding: 1.2rem;
+            min-width: 220px;
+            max-width: 220px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .book-cover {
+            width: 120px;
+            height: 160px;
+            border-radius: 2px;
+        }
+
+        .book-cover.red { background-color: #c44343; }
+        .book-cover.gold { background-color: #b8a43a; }
+        .book-cover.yellow { background-color: #e0e040; }
+        .book-cover.green { background-color: #40c850; }
+        .book-cover.blue { background-color: #4a7cc9; }
+        .book-cover.purple { background-color: #8b4a9e; }
+        .book-cover.teal { background-color: #2d9b8e; }
+        .book-cover.orange { background-color: #d47a2e; }
+
+        .book-title {
+            font-size: 0.8rem;
+            color: #3e2c1c;
+            text-align: center;
+        }
+
+        .btn-read {
+            background-color: #8b7355;
+            color: #fff;
+            border: none;
+            padding: 0.4rem 1.5rem;
+            border-radius: 20px;
+            font-family: 'Merriweather', serif;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-read:hover {
+            background-color: #6b5640;
+        }
+
+        .carousel-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .carousel-btn {
+            background: rgba(62, 44, 28, 0.15);
+            border: 1px solid rgba(62, 44, 28, 0.2);
+            color: #3e2c1c;
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(62, 44, 28, 0.3);
+        }
+
+        .carousel-btn:disabled {
+            opacity: 0.3;
+            cursor: default;
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(62, 44, 28, 0.2);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: #5a3e2b;
+            transform: scale(1.2);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #e8d8cc;
+            padding: 3rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .about-img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .about-text {
+            max-width: 300px;
+        }
+
+        .about-text h2 {
+            font-size: 1.2rem;
+            color: #5a3e2b;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .about-text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-text ul li {
+            font-size: 0.85rem;
+            color: #5a4a3a;
+            padding: 0.3rem 0;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .about-text ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #8b7355;
+            font-weight: bold;
+        }
+
+        .about-book {
+            width: 200px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2));
+        }
+
+        /* Scroll Section */
+        .scroll-section {
+            background-color: #e8d8cc;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .scroll-wrapper {
+            position: relative;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .scroll-bg {
+            width: 100%;
+            display: block;
+        }
+
+        .scroll-content {
+            position: absolute;
+            top: 10%;
+            left: 15%;
+            right: 15%;
+            bottom: 10%;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .scroll-cat {
+            width: 200px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .scroll-text {
+            flex: 1;
+        }
+
+        .scroll-text h2 {
+            font-size: 1.3rem;
+            color: #5a3e2b;
+            margin-bottom: 1rem;
+        }
+
+        .writers-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .writers-list li {
+            font-size: 0.9rem;
+            color: #5a4a3a;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #d4c5b0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #e8d8cc;
+            padding: 3rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-wrapper {
+            position: relative;
+            max-width: 700px;
+            width: 100%;
+            padding: 0 3rem;
+        }
+
+        .contact-deco-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #8b7355;
+        }
+
+        .contact-deco-line.left { left: 10px; }
+        .contact-deco-line.right { right: 10px; }
+
+        .contact-deco-line::before,
+        .contact-deco-line::after {
+            content: '◆';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #8b7355;
+            font-size: 0.7rem;
+        }
+
+        .contact-deco-line::before { top: -5px; }
+        .contact-deco-line::after { bottom: -5px; }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group.full {
+            flex: 1;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            color: #5a3e2b;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.6rem 0.8rem;
+            border: 1px solid #b8a890;
+            border-radius: 8px;
+            font-family: 'Merriweather', serif;
+            font-size: 0.85rem;
+            background-color: #f5efe8;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8b7355;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            align-self: center;
+            background-color: #8b7355;
+            color: #fff;
+            border: none;
+            padding: 0.6rem 2rem;
+            border-radius: 20px;
+            font-family: 'Merriweather', serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #6b5640;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #8b7b68;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #f0e6d8;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-links ul li a {
+            color: #d4c5b0;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #f0e6d8;
+        }
+
+        .footer-social {
+            text-align: center;
+        }
+
+        .footer-social p {
+            color: #d4c5b0;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid #b8a890;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4c5b0;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #6b5740;
+            color: #f0e6d8;
+        }
+
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 0.8rem;
+                padding: 1rem;
+            }
+
+            nav {
+                gap: 1.2rem;
+            }
+
+            .book-card {
+                min-width: 180px;
+                max-width: 180px;
+                padding: 0.8rem;
+            }
+
+            .book-cover {
+                width: 90px;
+                height: 120px;
+            }
+
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+
+            .scroll-content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+     

@@ -1,0 +1,354 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            color: #2e2014;
+            background-color: #e8d8cc;
+        }
+
+        /* Header */
+        header {
+            background-color: #9e8b78;
+            padding: 0.6rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #b8a890;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f0e6d8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: #d4c5b0;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #f0e6d8;
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 1.5px;
+            background: #c4a66a;
+        }
+
+        nav a svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .btn-login {
+            background-color: #7a6650;
+            color: #f0e6d8;
+            padding: 0.45rem 1rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #6b5740;
+        }
+
+        .btn-login svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        /* Contest Section */
+        .contests-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contest-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 2.5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .contest-card:nth-child(1) {
+            background-color: #9e8b78;
+        }
+
+        .contest-card:nth-child(2) {
+            background-color: #8a7866;
+        }
+
+        .contest-card:nth-child(3) {
+            background-color: #9e8b78;
+        }
+
+        .contest-card:nth-child(4) {
+            background-color: #8a7866;
+        }
+
+        .contest-card .contest-image {
+            flex-shrink: 0;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .contest-card .contest-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .contest-card .contest-title {
+            font-size: 1rem;
+            color: #1e120a;
+            font-weight: 700;
+        }
+
+        .contest-card .contest-text {
+            font-size: 0.75rem;
+            line-height: 1.7;
+            color: #2e2014;
+            text-align: justify;
+            margin-bottom: 0.5rem;
+        }
+
+        .contest-card .contest-meta {
+            font-size: 0.8rem;
+            color: #1e120a;
+        }
+
+        .contest-card .contest-meta span {
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .contest-card .contest-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .btn-detail,
+        .btn-participate {
+            background-color: #8b7355;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-family: 'Merriweather', serif;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .btn-detail:hover {
+            background-color: #6b5640;
+        }
+
+        .btn-participate {
+            background-color: #7a6650;
+        }
+
+        .btn-participate:hover {
+            background-color: #5a4a3a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #8b7b68;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #f0e6d8;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-links ul li a {
+            color: #d4c5b0;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #f0e6d8;
+        }
+
+        .footer-social {
+            text-align: center;
+        }
+
+        .footer-social p {
+            color: #d4c5b0;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid #b8a890;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4c5b0;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #6b5740;
+            color: #f0e6d8;
+        }
+
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 0.8rem;
+                padding: 1rem;
+            }
+
+            nav {
+                gap: 1.2rem;
+            }
+
+            .contest-card {
+                flex-direction: column;
+                align-items: center;
+                padding: 1.5rem;
+            }
+
+            .contest-card .contest-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .contest-card .contest-content {
+                align-items: center;
+                text-align: center;
+            }
+
+            .contest-card .contest-text {
+                text-align: left;
+            }
+
+            .contest-card .contest-meta {
+                text-align: left;
+            }
+
+            .contest-card .contest-actions {
+                align-items: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }

@@ -1,0 +1,101 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            color: #2e2014;
+            background-color: #e8d8cc;
+        }
+
+        /* Header */
+        header {
+            background-color: #9e8b78;
+            padding: 0.6rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #b8a890;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f0e6d8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: #d4c5b0;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #f0e6d8;
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            right: 0;
+            height: 1.5px;
+            background: #c4a66a;
+        }
+
+        nav a svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .btn-login {
+            background-color: #7a6650;
+            color: #f0e6d8;
+            padding: 0.45rem 1rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #6b5740;
+        }
+
+        .btn-login svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
