@@ -1,0 +1,436 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            color: #3e2c1c;
+            background-color: #e8d8cc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background-color: #9e8b78;
+            border-bottom: 2px solid #b8a890;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f0e6d8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-main a {
+            color: #d4c5b0;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 0.2rem;
+        }
+
+        .nav-main a:hover,
+        .nav-main a.active {
+            color: #f0e6d8;
+        }
+
+        .nav-main a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 1.5px;
+            background: #c4a66a;
+        }
+
+        .nav-main a svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-icon-btn {
+            background: none;
+            border: none;
+            color: #d4c5b0;
+            cursor: pointer;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-icon-btn:hover {
+            color: #f0e6d8;
+        }
+
+        .nav-icon-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+         /* Sub Navigation */
+        .nav-sub {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0.6rem 2rem;
+            background-color: #a89885;
+            border-top: 1px solid #b8a890;
+        }
+
+        .nav-sub a {
+            color: #d4c5b0;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 0.2rem;
+        }
+
+        .nav-sub a:hover,
+        .nav-sub a.active {
+            color: #f0e6d8;
+        }
+
+        .nav-sub a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 1.5px;
+            background: #c4a66a;
+        }
+
+        .nav-sub a svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        } 
+         
+         /* Works Section */
+        .works-section {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .book-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            background-color: #a89885;
+            border-radius: 8px;
+            padding: 1.2rem;
+            position: relative;
+        }
+
+        .book-cover {
+            width: 100px;
+            height: 150px;
+            background-color: #d9d3c9;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .book-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .book-info-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .book-info-item {
+            margin-right: 450px;
+            font-size: 0.85rem;
+            color: #2e2014;
+        }
+
+        .book-actions-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 0.3rem;
+        }
+
+        .btn-status,
+        .btn-edit {
+            background-color: #8b7b68;
+            color: #f0e6d8;
+            border: none;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-family: 'Merriweather', serif;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-status:hover,
+        .btn-edit:hover {
+            background-color: #6b5d4e;
+        }
+
+        .menu-dots {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .menu-dots span {
+            width: 5px;
+            height: 5px;
+            background-color: #2e2014;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .works-divider {
+            height: 3px;
+            background-color: #e8d8cc;
+            border-radius: 2px;
+            margin: 0.5rem 0;
+        }
+
+        /* Add Button */
+        .add-btn {
+            position: fixed;
+            bottom: 100px;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #e8d8cc;
+            border: 3px solid #8b7b68;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .add-btn:hover {
+            background-color: #d4c5b0;
+            transform: scale(1.05);
+        }
+
+        .add-btn svg {
+            width: 30px;
+            height: 30px;
+            stroke: #5a3e2b;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #8b7b68;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #f0e6d8;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-links ul li a {
+            color: #d4c5b0;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #f0e6d8;
+        }
+
+        .footer-social {
+            text-align: center;
+        }
+
+        .footer-social p {
+            color: #d4c5b0;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid #b8a890;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4c5b0;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #6b5740;
+            color: #f0e6d8;
+        }
+
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 0.8rem;
+                padding: 1rem;
+            }
+
+            .nav-main {
+                gap: 1.2rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-sub {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                justify-content: center;
+            }
+
+            .profile-wrapper {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-avatar {
+                width: 150px;
+                height: 150px;
+            }
+
+            .profile-avatar svg {
+                width: 90px;
+                height: 90px;
+            }
+
+            .profile-email {
+                justify-content: center;
+            }
+
+            .profile-actions {
+                justify-content: center;
+            }
+
+            .profile-subscribers {
+                justify-content: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
